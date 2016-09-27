@@ -61,7 +61,8 @@ On linux:
 
     $ sudo apt-get install imagemagick
 
-On windows see http://www.imagemagick.org/script/binary-releases.php#windows
+On windows, see http://www.imagemagick.org/script/binary-releases.php#windows. Also, on the version 7.0.0+ you will have to check the 'Install legacy utilities' option (which is not enabled by default).
+     
 
 ---
 
