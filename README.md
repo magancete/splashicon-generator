@@ -141,12 +141,12 @@ Include in your ```config.xml``` file:
     <splash density="port-xxxhdpi" src="res/screens/android/screen-xxxhdpi-portrait.png" />
 </platform>
 <platform name="ios">
-    <splash src="res/screen/ios/Default@2x~universal~anyany.png" />
-    <splash src="res/screen/ios/Default@2x~universal~comany.png" />
-    <splash src="res/screen/ios/Default@2x~universal~comcom.png" />
-    <splash src="res/screen/ios/Default@3x~universal~anyany.png" />
-    <splash src="res/screen/ios/Default@3x~universal~anycom.png" />
-    <splash src="res/screen/ios/Default@3x~universal~comany.png" />
+    <splash src="res/screens/ios/Default@2x~universal~anyany.png" />
+    <splash src="res/screens/ios/Default@2x~universal~comany.png" />
+    <splash src="res/screens/ios/Default@2x~universal~comcom.png" />
+    <splash src="res/screens/ios/Default@3x~universal~anyany.png" />
+    <splash src="res/screens/ios/Default@3x~universal~anycom.png" />
+    <splash src="res/screens/ios/Default@3x~universal~comany.png" />
 </platform>
 <platform name="windows">
     <splash width="620" height="300" src="res/screens/windows/SplashScreen.scale-100.png" />
