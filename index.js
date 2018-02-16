@@ -23,35 +23,49 @@ var getPlatformIcons = function () {
         icons: [
             // Default icon (avoid Apple submit error ITMS-90032)
             { name: "../../../icon.png", size: 57 },
-            { name: 'icon-57.png', size: 57 },
-            // iOS 7.0+, iPhone / iPod Touch  -->
+
+
+            //iOS 8.0+ -->
+            //iPhone 6 Plus  -->
+            { name: 'icon-60@3x.png', size: 180 },
+            //iOS 7.0+ -->
+            //iPhone / iPod Touch  -->
             { name: 'icon-60.png', size: 60 },
-            // iPhone 6s, iPhone 6, iPhone SE
-            { name: 'icon-60-2x.png', size: 120 },
-            // iOS 8.0+, iPhone 6s Plus, iPhone 6 Plus
-            { name: 'icon-60-3x.png', size: 180 },
-            // iPad -->
+            { name: 'icon-60@2x.png', size: 120 },
+            //iPad -->
             { name: 'icon-76.png', size: 76 },
-            // iPad, iPad mini
-            { name: 'icon-76-2x.png', size: 152 },
-            // iOS 6.1, Spotlight Icon -->
+            { name: 'icon-76@2x.png', size: 152 },
+            //Spotlight Icon -->
             { name: 'icon-40.png', size: 40 },
-            { name: 'icon-40-2x.png', size: 80 },
-            { name: 'icon-40-3x.png', size: 120 },
-            // iPhone / iPod Touch -->
-            { name: 'icon-57-2x.png', size: 114 },
-            // iPad -->
+            { name: 'icon-40@2x.png', size: 80 },
+            //iOS 6.1 -->
+            //iPhone / iPod Touch -->
+            { name: 'icon.png', size: 57 },
+            { name: 'icon@2x.png', size: 114 },
+            //iPad -->
             { name: 'icon-72.png', size: 72 },
-            { name: 'icon-72-2x.png', size: 144 },
-            // iPhone Spotlight and Settings Icon -->
+            { name: 'icon-72@2x.png', size: 144 },
+            //iPad Pro -->
+            { name: 'icon-167.png', size: 167 },
+            //iPhone Spotlight and Settings Icon -->
             { name: 'icon-small.png', size: 29 },
-            { name: 'icon-small-2x.png', size: 58 },
-            { name: 'icon-small-3x.png', size: 87 },
-            // iPad Spotlight and Settings Icon -->
+            { name: 'icon-small@2x.png', size: 58 },
+            //iPad Spotlight and Settings Icon -->
             { name: 'icon-50.png', size: 50 },
-            { name: 'icon-50-2x.png', size: 100 },
-            // iPad Pro
-            { name: 'icon-83.5-2x.png', size: 167 }
+            { name: 'icon-50@2x.png', size: 100 },
+            //iPad Pro -->
+            { name: 'icon-83.5@2x.png', size: 167 },
+
+            // we also need 20x20 for iPad Notification 20pt@1
+            { name: 'icon-20.png', size: 20 },
+
+            //Apple-Watch
+            { name: 'icon-24@2.png', size: 48 },
+            { name: 'icon-27.5@2.png', size: 55 },
+            { name: 'icon-44@2.png', size: 88 },
+            { name: 'icon-86@2.png', size: 172 },
+            { name: 'icon-98@2.png', size: 196 },
+
             // Other sizes -->
             // { name:'icon-50-3x.png', size:150 },
             // { name:'icon-57-3x.png', size:171 },
