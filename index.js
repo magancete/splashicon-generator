@@ -84,6 +84,17 @@ var getPlatformIcons = function () {
         ]
     });
 
+    //appStore Icon for iOS
+    platforms.push({
+        name: 'ios',
+        desc: "iOS Store",
+        iconsPath: 'res/store/ios/',
+        isAdded: true,
+        icons: [
+            { name: "icon-1024.jpg", size: 1024 } // App Store
+        ]
+    });
+
     //ok
     platforms.push({
         name: 'android',
@@ -96,6 +107,19 @@ var getPlatformIcons = function () {
             { name: 'icon-96-xhdpi.png', size: 96, density: 'xhdpi' },
             { name: 'icon-144-xxhdpi.png', size: 144, density: 'xxhdpi' },
             { name: 'icon-192-xxxhdpi.png', size: 192, density: 'xxxhdpi' },
+            //we need a Android-Store icon of the Android-Icon (not the fallback-Icon!)
+            { name: 'icon-512.png', size: 512 } //TODO: maybe put into store-directory
+        ]
+    });
+
+    //appStore Icon for Android
+    platforms.push({
+        name: 'android',
+        desc: "Android Play Store",
+        iconsPath: 'res/store/android/',
+        isAdded: true,
+        icons: [
+            { name: "icon-512.png", size: 512 }
         ]
     });
 
@@ -127,18 +151,6 @@ var getPlatformIcons = function () {
             { name: 'StoreLogo.scale-240.png', size: 120 },
             { name: 'Wide310x150Logo.scale-100.png', size: 310 },
             { name: 'Wide310x150Logo.scale-240.png', size: 744 },
-        ]
-    });
-
-    //ok
-    platforms.push({
-        name: 'store',
-        iconsPath: 'store/icons/',
-        isAdded: true,
-        icons: [
-            { path: './android/', name: "icon-512.png", size: 512 },
-            { path: './wp8/', name: "icon-300.png", size: 300 },
-            { path: './ios/', name: "icon-1024.jpg", size: 1024 } // App Store
         ]
     });
 
@@ -194,6 +206,16 @@ var getPlatformSplashs = function () {
         ]
     });
 
+    platforms.push({
+        name: 'android',    //we want to use the specific android splash (if there is one)
+        desc: "Android Play Store (Cover Image)",
+        isAdded: true,
+        splashPath: 'res/store/android/',
+        splash: [
+            { name: 'cover-store.png', width: 1024, height: 500 },
+        ]
+    });
+
     //ok
     // https://msdn.microsoft.com/en-us/library/windows/apps/ff769511(v=vs.105).aspx
     platforms.push({
@@ -217,15 +239,6 @@ var getPlatformSplashs = function () {
             { width: 620, height: 300, name: "SplashScreen.scale-100.png" },
             { width: 1152, height: 1920, name: "SplashScreen.scale-240.png" },
             { width: 1152, height: 1920, name: "SplashScreenPhone.scale-240.png" },
-        ]
-    });
-
-    platforms.push({
-        name: 'store',
-        isAdded: true,
-        splashPath: 'store/screens/',
-        splash: [
-            { path: './android/', name: 'cover-store.png', width: 1024, height: 500 },
         ]
     });
 
@@ -310,7 +323,8 @@ var generateIcon = function (platform, icon) {
  */
 var generateIconsForPlatform = function (platform) {
     var deferred = Q.defer();
-    display.header('Generating Icons for ' + platform.name);
+    var desc = platform.desc ? platform.desc : platform.name;
+    display.header('Generating Icons for ' + desc);
     var all = [];
     var icons = platform.icons;
     icons.forEach(function (icon) {
@@ -418,7 +432,8 @@ var generateSplash = function (platform, splash) {
  */
 var generateSplashForPlatform = function (platform) {
     var deferred = Q.defer();
-    display.header('Generating splash screen for ' + platform.name);
+    var desc = platform.desc ? platform.desc : platform.name;
+    display.header('Generating splash screen for ' + desc);
     var all = [];
     var splashes = platform.splash;
     splashes.forEach(function (splash) {
