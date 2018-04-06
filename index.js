@@ -50,6 +50,7 @@ var getPlatformIcons = function () {
             //iPhone Spotlight and Settings Icon -->
             { name: 'icon-small.png', size: 29 },
             { name: 'icon-small@2x.png', size: 58 },
+            { name: 'icon-small@3x.png', size: 87 },
             //iPad Spotlight and Settings Icon -->
             { name: 'icon-50.png', size: 50 },
             { name: 'icon-50@2x.png', size: 100 },

@@ -94,6 +94,7 @@ Include in your ```config.xml``` file:
     <icon height="167" src="res/icons/ios/icon-167.png" width="167" />
     <icon height="29" src="res/icons/ios/icon-small.png" width="29" />
     <icon height="58" src="res/icons/ios/icon-small@2x.png" width="58" />
+    <icon height="87" src="res/icons/ios/icon-small@3x.png" width="87" />
     <icon height="50" src="res/icons/ios/icon-50.png" width="50" />
     <icon height="100" src="res/icons/ios/icon-50@2x.png" width="100" />
     <icon height="167" src="res/icons/ios/icon-83.5@2x.png" width="167" />
