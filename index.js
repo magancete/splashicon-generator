@@ -124,6 +124,22 @@ var getPlatformIcons = function () {
         ]
     });
 
+    //appStore Icon for Android
+    platforms.push({
+        name: 'android_notification',
+        desc: "Android Notification Icons",
+        iconsPath: 'res/icons/android_notification/',
+        isAdded: true,
+        icons: [
+            { name: "drawable/icon_notification.png", size: 48 },
+            { name: "drawable-mdpi/icon_notification.png", size: 24 },
+            { name: "drawable-hdpi/icon_notification.png", size: 36 },
+            { name: "drawable-xhdpi/icon_notification.png", size: 48 },
+            { name: "drawable-xxhdpi/icon_notification.png", size: 72 },
+            { name: "drawable-xxxhdpi/icon_notification.png", size: 96 }
+        ]
+    });
+    /*
     //ok
     platforms.push({
         name: 'wp8',
@@ -154,7 +170,7 @@ var getPlatformIcons = function () {
             { name: 'Wide310x150Logo.scale-240.png', size: 744 },
         ]
     });
-
+    */
     platforms = settings.ICON_PLATFORMS || platforms
 
     deferred.resolve(platforms);
@@ -216,7 +232,7 @@ var getPlatformSplashs = function () {
             { name: 'cover-store.png', width: 1024, height: 500 },
         ]
     });
-
+    /*
     //ok
     // https://msdn.microsoft.com/en-us/library/windows/apps/ff769511(v=vs.105).aspx
     platforms.push({
@@ -242,7 +258,7 @@ var getPlatformSplashs = function () {
             { width: 1152, height: 1920, name: "SplashScreenPhone.scale-240.png" },
         ]
     });
-
+    */
     platforms = settings.SPLASH_PLATFORMS || platforms
 
     deferred.resolve(platforms);
