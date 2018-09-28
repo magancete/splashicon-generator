@@ -108,8 +108,6 @@ var getPlatformIcons = function () {
             { name: 'icon-96-xhdpi.png', size: 96, density: 'xhdpi' },
             { name: 'icon-144-xxhdpi.png', size: 144, density: 'xxhdpi' },
             { name: 'icon-192-xxxhdpi.png', size: 192, density: 'xxxhdpi' },
-            //we need a Android-Store icon of the Android-Icon (not the fallback-Icon!)
-            { name: 'icon-512.png', size: 512 } //TODO: maybe put into store-directory
         ]
     });
 
