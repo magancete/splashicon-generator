@@ -223,6 +223,7 @@ var getPlatformSplashs = function () {
         ]
     });
 
+    /*
     platforms.push({
         name: 'android',    //we want to use the specific android splash (if there is one)
         desc: "Android Play Store (Cover Image)",
@@ -232,6 +233,7 @@ var getPlatformSplashs = function () {
             { name: 'cover-store.png', width: 1024, height: 500 },
         ]
     });
+    */
     /*
     //ok
     // https://msdn.microsoft.com/en-us/library/windows/apps/ff769511(v=vs.105).aspx
