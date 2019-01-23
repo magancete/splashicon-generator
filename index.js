@@ -63,7 +63,7 @@ var getPlatformIcons = function () {
             //Apple-Watch
             { name: 'icon-24@2.png', size: 48 },
             { name: 'icon-27.5@2.png', size: 55 },
-            { name: 'icon-44@2.png', size: 88 },
+            //{ name: 'icon-44@2.png', size: 88 },  //not needed anymore with since XCode 10
             { name: 'icon-86@2.png', size: 172 },
             { name: 'icon-98@2.png', size: 196 },
 
