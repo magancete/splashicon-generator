@@ -89,7 +89,8 @@ Include in your ```config.xml``` file:
     <icon src="res/icons/ios/icon-29@3x.png" height="87" width="87"/>
     <icon src="res/icons/ios/icon-33@2x.png" height="66" width="66"/>
     <icon src="res/icons/ios/icon-40.png" height="40" width="40"/>
-    <icon src="res/icons/ios/icon-40@2x.png" height="80" width="80"/>
+    <icon src="res/icons/ios/icon-40@2x.png" height="80" width="80"/>     
+    <icon src="res/icons/ios/icon-44@2x.png" height="88" width="88"/>
     <icon src="res/icons/ios/icon-46@2x.png" height="92" width="92"/>
     <icon src="res/icons/ios/icon-50.png" height="50" width="50"/>
     <icon src="res/icons/ios/icon-50@2x.png" height="100" width="100"/>
