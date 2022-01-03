@@ -25,7 +25,6 @@ var getPlatformIcons = function () {
             { name: "../../../icon.png", size: 57 },
 
             { name: 'icon-20.png', size: 20 },
-            { name: 'icon-20@2x.png', size: 40 },
             { name: 'icon-20@3x.png', size: 60 },   
                        
             { name: 'icon-24@2x.png', size: 48 },
