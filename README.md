@@ -8,7 +8,7 @@ Consider using the base icon and splash images in the `model` folder, so that im
 
 ### Installation
 
-     $ npm install splashicon-generator -g
+     $ npm install https://github.com/magancete/splashicon-generator -g
 
 ---
 
@@ -80,31 +80,36 @@ Include in your ```config.xml``` file:
     <icon density="xxxhdpi" src="res/icons/android/icon-192-xxxhdpi.png" />
 </platform>
 <platform name="ios">
-    <icon height="180" src="res/icons/ios/icon-60@3x.png" width="180" />
-    <icon height="60" src="res/icons/ios/icon-60.png" width="60" />
-    <icon height="120" src="res/icons/ios/icon-60@2x.png" width="120" />
-    <icon height="76" src="res/icons/ios/icon-76.png" width="76" />
-    <icon height="152" src="res/icons/ios/icon-76@2x.png" width="152" />
-    <icon height="40" src="res/icons/ios/icon-40.png" width="40" />
-    <icon height="80" src="res/icons/ios/icon-40@2x.png" width="80" />
-    <icon height="57" src="res/icons/ios/icon.png" width="57" />
-    <icon height="114" src="res/icons/ios/icon@2x.png" width="114" />
-    <icon height="72" src="res/icons/ios/icon-72.png" width="72" />
-    <icon height="144" src="res/icons/ios/icon-72@2x.png" width="144" />
-    <icon height="167" src="res/icons/ios/icon-167.png" width="167" />
-    <icon height="29" src="res/icons/ios/icon-small.png" width="29" />
-    <icon height="58" src="res/icons/ios/icon-small@2x.png" width="58" />
-    <icon height="87" src="res/icons/ios/icon-small@3x.png" width="87" />
-    <icon height="50" src="res/icons/ios/icon-50.png" width="50" />
-    <icon height="100" src="res/icons/ios/icon-50@2x.png" width="100" />
-    <icon height="167" src="res/icons/ios/icon-83.5@2x.png" width="167" />
-    <icon height="20" src="res/icons/ios/icon-20.png" width="20" />
-    <icon height="48" src="res/icons/ios/icon-24@2.png" width="48" />
-    <icon height="55" src="res/icons/ios/icon-27.5@2.png" width="55" />
-    <icon height="88" src="res/icons/ios/icon-44@2.png" width="88" />
-    <icon height="172" src="res/icons/ios/icon-86@2.png" width="172" />
-    <icon height="196" src="res/icons/ios/icon-98@2.png" width="196" />
-    <icon height="1024" src="store/icons/icon-1024.jpg" width="1024" />
+    <icon src="res/icons/ios/icon-20.png" height="20" width="20"/>
+    <icon src="res/icons/ios/icon-20@3x.png" height="60" width="60"/>
+    <icon src="res/icons/ios/icon-24@2x.png" height="48" width="48"/>
+    <icon src="res/icons/ios/icon-27.5@2x.png" height="55" width="55"/>
+    <icon src="res/icons/ios/icon-29.png" height="29" width="29"/>
+    <icon src="res/icons/ios/icon-29@2x.png" height="58" width="58"/>
+    <icon src="res/icons/ios/icon-29@3x.png" height="87" width="87"/>
+    <icon src="res/icons/ios/icon-33@2x.png" height="66" width="66"/>
+    <icon src="res/icons/ios/icon-40.png" height="40" width="40"/>
+    <icon src="res/icons/ios/icon-40@2x.png" height="80" width="80"/>
+    <icon src="res/icons/ios/icon-46@2x.png" height="92" width="92"/>
+    <icon src="res/icons/ios/icon-50.png" height="50" width="50"/>
+    <icon src="res/icons/ios/icon-50@2x.png" height="100" width="100"/>
+    <icon src="res/icons/ios/icon-51@2x.png" height="102" width="102"/>
+    <icon src="res/icons/ios/icon-57.png" height="57" width="57"/>
+    <icon src="res/icons/ios/icon-57@2x.png" height="114" width="114"/>
+    <icon src="res/icons/ios/icon-60.png" height="60" width="60"/>
+    <icon src="res/icons/ios/icon-60@2x.png" height="120" width="120"/>
+    <icon src="res/icons/ios/icon-60@3x.png" height="180" width="180"/>
+    <icon src="res/icons/ios/icon-72.png" height="72" width="72"/>
+    <icon src="res/icons/ios/icon-72@2x.png" height="144" width="144"/>
+    <icon src="res/icons/ios/icon-76.png" height="76" width="76"/>
+    <icon src="res/icons/ios/icon-76@2x.png" height="152" width="152"/>
+    <icon src="res/icons/ios/icon-83.5@2x.png" height="167" width="167"/>
+    <icon src="res/icons/ios/icon-86@2x.png" height="172" width="172"/>
+    <icon src="res/icons/ios/icon-98@2x.png" height="196" width="196"/>
+    <icon src="res/icons/ios/icon-108@2x.png" height="216" width="216"/>
+    <icon src="res/icons/ios/icon-117@2x.png" height="234" width="234"/>
+    <icon src="res/icons/ios/icon-167.png" height="167" width="167"/>
+    <icon src="res/icons/ios/icon-1024.png" height="1024" width="1024"/>
 </platform>
 <platform name="windows">
     <icon height="150" src="res/icons/windows/Square150x150Logo.scale-100.png" width="150" />
