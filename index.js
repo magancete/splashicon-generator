@@ -40,6 +40,8 @@ var getPlatformIcons = function () {
             { name: 'icon-40.png', size: 40 },
             { name: 'icon-40@2x.png', size: 80 },  
             
+            { name: 'icon-44@2x.png', size: 88 },  
+            
             { name: 'icon-46@2x.png', size: 92 },
             
             { name: 'icon-50.png', size: 50 },
