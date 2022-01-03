@@ -1,9 +1,9 @@
 {
     "name": "splashicon-generator",
-    "version": "0.2.12",
-    "description": "Automatic icon & splash resizing for PhoneGap",
+    "version": "0.3.0",
+    "description": "Automatic icon & splash resizing for Cordova",
     "main": "index.js",
-    "preferGlobal": false,
+    "preferGlobal": true,
     "bin": {
         "splashicon-generator": "./bin/splashicon-generator"
     },
@@ -12,7 +12,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git://github.com/eberlitz/splashicon-generator.git"
+        "url": "git://github.com/magancete/splashicon-generator.git"
     },
     "keywords": [
         "cordova",
@@ -22,14 +22,14 @@
         "resize"
     ],
     "author": {
-        "name": "Eduardo Eidelwein Berlitz",
-        "email": "eberlitz@gmail.com"
+        "name": "Carlos Magán López",
+        "email": "magancete@gmail.com"
     },
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/eberlitz/splashicon-generator/issues"
+        "url": "https://github.com/magancete/splashicon-generator/issues"
     },
-    "homepage": "https://github.com/eberlitz/splashicon-generator",
+    "homepage": "https://github.com/magancete/splashicon-generator",
     "dependencies": {
         "colors": "^0.6.2",
         "imagemagick": "^0.1.3",
@@ -40,8 +40,8 @@
     },
     "contributors": [
         {
-            "name": "Luiz Pereira de Souza Filho",
-            "email": "lpsouza@gmail.com"
+            "name": "Carlos Magán López",
+            "email": "magancete@gmail.com"
         }
     ]
 }
