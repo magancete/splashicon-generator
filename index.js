@@ -24,64 +24,57 @@ var getPlatformIcons = function () {
             // Default icon (avoid Apple submit error ITMS-90032)
             { name: "../../../icon.png", size: 57 },
 
-
-            //iOS 8.0+ -->
-            //iPhone 6 Plus  -->
-            { name: 'icon-60@3x.png', size: 180 },
-            //iOS 7.0+ -->
-            //iPhone / iPod Touch  -->
-            { name: 'icon-60.png', size: 60 },
-            { name: 'icon-60@2x.png', size: 120 },
-            //iPad -->
-            { name: 'icon-76.png', size: 76 },
-            { name: 'icon-76@2x.png', size: 152 },
-            //Spotlight Icon -->
+            { name: 'icon-20.png', size: 20 },
+            { name: 'icon-20@2x.png', size: 40 },
+            { name: 'icon-20@3x.png', size: 60 },   
+                       
+            { name: 'icon-24@2x.png', size: 48 },
+            
+            { name: 'icon-27.5@2x.png', size: 55 },
+            
+            { name: 'icon-29.png', size: 29 },
+            { name: 'icon-29@2x.png', size: 58 },
+            { name: 'icon-29@3x.png', size: 87 },
+            
+            { name: 'icon-33@2x.png', size: 66 },
+            
             { name: 'icon-40.png', size: 40 },
-            { name: 'icon-40@2x.png', size: 80 },
-            //iOS 6.1 -->
-            //iPhone / iPod Touch -->
-            { name: 'icon.png', size: 57 },
-            { name: 'icon@2x.png', size: 114 },
-            //iPad -->
-            { name: 'icon-72.png', size: 72 },
-            { name: 'icon-72@2x.png', size: 144 },
-            //iPad Pro -->
-            { name: 'icon-167.png', size: 167 },
-            //iPhone Spotlight and Settings Icon -->
-            { name: 'icon-small.png', size: 29 },
-            { name: 'icon-small@2x.png', size: 58 },
-            { name: 'icon-small@3x.png', size: 87 },
-            //iPad Spotlight and Settings Icon -->
+            { name: 'icon-40@2x.png', size: 80 },  
+            
+            { name: 'icon-46@2x.png', size: 92 },
+            
             { name: 'icon-50.png', size: 50 },
             { name: 'icon-50@2x.png', size: 100 },
-            //iPad Pro -->
+            
+            { name: 'icon-51@2x.png', size: 102 },
+            
+            { name: 'icon-57.png', size: 57 },
+            { name: 'icon-57@2x.png', size: 114 },
+            
+            { name: 'icon-60.png', size: 60 },
+            { name: 'icon-60@2x.png', size: 120 },            
+            { name: 'icon-60@3x.png', size: 180 },
+            
+            { name: 'icon-72.png', size: 72 },
+            { name: 'icon-72@2x.png', size: 144 },
+            
+            { name: 'icon-76.png', size: 76 },
+            { name: 'icon-76@2x.png', size: 152 },            
+            
             { name: 'icon-83.5@2x.png', size: 167 },
+            
+            { name: 'icon-86@2x.png', size: 172 },
+            
+            { name: 'icon-98@2x.png', size: 196 },
+            
+            { name: 'icon-108@2x.png', size: 216 },            
+            
+            { name: 'icon-117@2x.png', size: 234 },
+            
+            { name: 'icon-167.png', size: 167 },
+            
+            { name: "icon-1024.png", size: 1024 }
 
-            // we also need 20x20 for iPad Notification 20pt@1
-            { name: 'icon-20.png', size: 20 },
-
-            //Apple-Watch
-            { name: 'icon-24@2.png', size: 48 },
-            { name: 'icon-27.5@2.png', size: 55 },
-            //{ name: 'icon-44@2.png', size: 88 },  //not needed anymore with since XCode 10
-            { name: 'icon-86@2.png', size: 172 },
-            { name: 'icon-98@2.png', size: 196 },
-
-            // Other sizes -->
-            // { name:'icon-50-3x.png', size:150 },
-            // { name:'icon-57-3x.png', size:171 },
-            // { name:'icon-72-3x.png', size:216 },
-            // { name:'icon-76-3x.png', size:228 },
-            // { name:'icon-48.png', size:48 },
-            // { name:'icon-48-2x.png', size:96 },
-            // { name:'icon-58.png', size:58 },
-            // { name:'icon-58-2x.png', size:116 },
-            // { name:'icon-58-3x.png', size:174 },
-            // { name:'icon-64.png', size:64 },
-            // { name:'icon-64-2x.png', size:128 },
-            // { name:'icon-64-3x.png', size:192 },
-            // { name:'icon-83.5.png', size:83.5 },
-            // { name:'icon-320.png', size:320 },
         ]
     });
 
