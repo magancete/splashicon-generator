@@ -260,12 +260,103 @@ var getPlatformSplashs = function () {
 };
 
 /**
+ * Check which platforms are added to the project and return their dark splash screen names and sizes
+ *
+ * @param  {String} projectName
+ * @return {Promise} resolves with an array of platforms
+ */
+var getPlatformDarkSplashs = function () {
+    var deferred = Q.defer();
+    var platforms = [];
+
+    //ok
+    platforms.push({
+        name: 'ios',
+        isAdded: true,
+        splashPath: 'res/screens/ios/',
+        splash: [
+            { name: "Default@2x~universal~anyany~dark.png" , width: 2732 , height: 2732 },
+            { name: "Default@2x~universal~comany~dark.png" , width: 1278 , height: 2732 },
+            { name: "Default@2x~universal~comcom~dark.png" , width: 1334 , height: 750 },
+            { name: "Default@3x~universal~anyany~dark.png" , width: 2208 , height: 2208 },
+            { name: "Default@3x~universal~anycom~dark.png" , width: 2208 , height: 1242 },
+            { name: "Default@3x~universal~comany~dark.png" , width: 1242 , height: 2208 }
+        ]
+    });
+
+    //ok
+    platforms.push({
+        name: 'android',
+        isAdded: true,
+        splashPath: 'res/screens/android/',
+        splash: [
+            { name: "screen-night-ldpi-portrait.png", width: 320, height: 426, density: "port-night-ldpi" }, // 200x320
+            { name: "screen-night-ldpi-landscape.png", width: 426, height: 320, density: "land-night-ldpi" }, // 320x200
+            { name: "screen-night-hdpi-portrait.png", width: 480, height: 640, density: "port-night-hdpi" }, // 320x480
+            { name: "screen-night-hdpi-landscape.png", width: 640, height: 480, density: "land-night-hdpi" }, // 480x320
+            { name: "screen-night-mdpi-portrait.png", width: 320, height: 470, density: "port-night-mdpi" }, // 480x800
+            { name: "screen-night-mdpi-landscape.png", width: 470, height: 320, density: "land-night-mdpi" }, // 800x480
+            { name: "screen-night-xhdpi-portrait.png", width: 720, height: 960, density: "port-night-xhdpi" }, // 720x1280
+            { name: "screen-night-xhdpi-landscape.png", width: 960, height: 720, density: "land-night-xhdpi" }, // 1280x720
+            { name: "screen-night-xxhdpi-portrait.png", width: 960, height: 1600, density: "port-night-xxhdpi" }, // 960x1600
+            { name: "screen-night-xxhdpi-landscape.png", width: 1600, height: 960, density: "land-night-xxhdpi" }, // 1600x960
+            { name: "screen-night-xxxhdpi-portrait.png", width: 1280, height: 1920, density: "port-night-xxhdpi" }, // 1280x1920
+            { name: "screen-night-xxxhdpi-landscape.png", width: 1920, height: 1280, density: "land-night-xxhdpi" } // 1920x1280
+        ]
+    });
+
+    /*
+    platforms.push({
+        name: 'android',    //we want to use the specific android splash (if there is one)
+        desc: "Android Play Store (Cover Image)",
+        isAdded: true,
+        splashPath: 'res/store/android/',
+        splash: [
+            { name: 'cover-store-dark.png', width: 1024, height: 500 },
+        ]
+    });
+    */
+    /*
+    //ok
+    // https://msdn.microsoft.com/en-us/library/windows/apps/ff769511(v=vs.105).aspx
+    platforms.push({
+        name: 'wp8',
+        isAdded: true,
+        splashPath: 'res/screens/wp8/',
+        splash: [
+            { width: 768, height: 1280, name: "SplashScreenImage-dark.jpg" },
+            { width: 480, height: 800, name: "SplashScreenImage-dark.screen-WVGA.jpg" },
+            { width: 768, height: 1280, name: "SplashScreenImage-dark.screen-WXGA.jpg" },
+            { width: 720, height: 1280, name: "SplashScreenImage-dark.screen-720p.jpg" }
+        ]
+    });
+
+    //ok
+    platforms.push({
+        name: 'windows',
+        isAdded: true,
+        splashPath: 'res/screens/windows/',
+        splash: [
+            { width: 620, height: 300, name: "SplashScreen-dark.scale-100.png" },
+            { width: 1152, height: 1920, name: "SplashScreen-dark.scale-240.png" },
+            { width: 1152, height: 1920, name: "SplashScreenPhone-dark.scale-240.png" },
+        ]
+    });
+    */
+    platforms = settings.SPLASH_PLATFORMS || platforms
+
+    deferred.resolve(platforms);
+    return deferred.promise;
+};
+
+/**
  * @var {Object} settings - names of the confix file and of the icon image
  * TODO: add option to get these values as CLI params
  */
 var settings = {};
 settings.ICON_FILE = path.join('model', 'icon.png');
 settings.SPLASH_FILE = path.join('model', 'splash.png');
+settings.SPLASH_DARK_FILE = path.join('model', 'splash-dark.png');
 
 /**
  * @var {Object} console utils
@@ -436,6 +527,47 @@ var generateSplash = function (platform, splash) {
 };
 
 /**
+ * Crops and creates a new dark splash in the platform's folder.
+ *
+ * @param  {Object} platform
+ * @param  {Object} splash
+ * @return {Promise}
+ */
+var generateDarkSplash = function (platform, splash) {
+    var deferred = Q.defer();
+    try {
+        var filePath = path.join(platform.splashPath, splash.name);
+        var filedirName = path.dirname(filePath);
+        if (!fs.existsSync(filedirName)) {
+            nodeFs.mkdirSync(filedirName, '0777', true);
+        }
+        var srcPath = settings.SPLASH_DARK_FILE;
+        var platformIconPath = path.join(path.dirname(srcPath), platform.name, path.basename(srcPath));
+        if (fs.existsSync(platformIconPath)) {
+            srcPath = platformIconPath;
+        }
+        ig.crop({
+            srcPath: srcPath,
+            dstPath: filePath,
+            quality: 1,
+            format: splash.name.replace(/.*\.(\w+)$/i, '$1').toLowerCase(),
+            width: splash.width,
+            height: splash.height,
+        }, function (err, stdout, stderr) {
+            if (err) {
+                deferred.reject(err);
+            } else {
+                deferred.resolve();
+                display.success(splash.name + ' created');
+            }
+        });
+    } catch (error) {
+        deferred.reject(err);
+    }
+    return deferred.promise;
+};
+
+/**
  * Generates splash based on the platform object
  *
  * @param  {Object} platform
@@ -449,6 +581,29 @@ var generateSplashForPlatform = function (platform) {
     var splashes = platform.splash;
     splashes.forEach(function (splash) {
         all.push(generateSplash(platform, splash));
+    });
+    Q.all(all).then(function () {
+        deferred.resolve();
+    }).catch(function (err) {
+        console.log(err);
+    });
+    return deferred.promise;
+};
+
+/**
+ * Generates splash based on the platform object
+ *
+ * @param  {Object} platform
+ * @return {Promise}
+ */
+var generateDarkSplashForPlatform = function (platform) {
+    var deferred = Q.defer();
+    var desc = platform.desc ? platform.desc : platform.name;
+    display.header('Generating splash screen for ' + desc);
+    var all = [];
+    var splashes = platform.splash;
+    splashes.forEach(function (splash) {
+        all.push(generateDarkSplash(platform, splash));
     });
     Q.all(all).then(function () {
         deferred.resolve();
@@ -500,11 +655,54 @@ var validSplashExists = function () {
     return deferred.promise;
 };
 
+/**
+ * Goes over all the platforms and triggers dark splash screen generation
+ *
+ * @param  {Array} platforms
+ * @return {Promise}
+ */
+var generateDarkSplashes = function (platforms) {
+    var deferred = Q.defer();
+    var sequence = Q();
+    var all = [];
+    _(platforms).where({
+        isAdded: true
+    }).forEach(function (platform) {
+        sequence = sequence.then(function () {
+            return generateDarkSplashForPlatform(platform);
+        });
+        all.push(sequence);
+    });
+    Q.all(all).then(function () {
+        deferred.resolve();
+    });
+    return deferred.promise;
+};
+/**
+ * Checks if a valid dark splash file exists
+ *
+ * @return {Promise} resolves if exists, rejects otherwise
+ */
+var validDarkSplashExists = function () {
+    var deferred = Q.defer();
+    fs.exists(settings.SPLASH_DARK_FILE, function (exists) {
+        if (exists) {
+            display.success(settings.SPLASH_DARK_FILE + ' exists');
+            deferred.resolve(true);
+        } else {
+            display.error(settings.SPLASH_DARK_FILE + ' does not exist in the root folder');
+            deferred.resolve(false);
+        }
+    });
+    return deferred.promise;
+};
+
+
 
 function generate(options) {
     settings = options || settings;
     display.header('Checking Splash & Icon');
-    return Q.all([validIconExists(), validSplashExists()])
+    return Q.all([validIconExists(), validSplashExists(), validDarkSplashExists])
         .then(function (results) {
             var hasIcon = results[0] === true;
             var hasSplash = results[1] === true;
@@ -525,6 +723,7 @@ function generate(options) {
                 promise = Q.when(promise)
                     .then(getPlatformSplashs)
                     .then(generateSplashes);
+                    .then(generateDarkSplashes);
             }
 
             return Q.when(promise);
