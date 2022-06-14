@@ -151,7 +151,19 @@ Include in your ```config.xml``` file:
     <splash density="port-mdpi" src="res/screens/android/screen-mdpi-portrait.png" />
     <splash density="port-xhdpi" src="res/screens/android/screen-xhdpi-portrait.png" />
     <splash density="port-xxhdpi" src="res/screens/android/screen-xxhdpi-portrait.png" />
-    <splash density="port-xxxhdpi" src="res/screens/android/screen-xxxhdpi-portrait.png" />
+    <splash density="port-xxxhdpi" src="res/screens/android/screen-xxxhdpi-portrait.png" />     
+    <splash density="land-night-hdpi" src="res/screens/android/screen-night-hdpi-landscape.png" />
+    <splash density="land-night-ldpi" src="res/screens/android/screen-night-ldpi-landscape.png" />
+    <splash density="land-night-mdpi" src="res/screens/android/screen-night-mdpi-landscape.png" />
+    <splash density="land-night-xhdpi" src="res/screens/android/screen-night-xhdpi-landscape.png" />
+    <splash density="land-night-xxhdpi" src="res/screens/android/screen-night-xxhdpi-landscape.png" />
+    <splash density="land-night-xxxhdpi" src="res/screens/android/screen-night-xxxhdpi-landscape.png" />
+    <splash density="port-night-hdpi" src="res/screens/android/screen-night-hdpi-portrait.png" />
+    <splash density="port-night-ldpi" src="res/screens/android/screen-night-ldpi-portrait.png" />
+    <splash density="port-night-mdpi" src="res/screens/android/screen-night-mdpi-portrait.png" />
+    <splash density="port-night-xhdpi" src="res/screens/android/screen-night-xhdpi-portrait.png" />
+    <splash density="port-night-xxhdpi" src="res/screens/android/screen-night-xxhdpi-portrait.png" />
+    <splash density="port-night-xxxhdpi" src="res/screens/android/screen-night-xxxhdpi-portrait.png" />
 </platform>
 <platform name="ios">
     <splash src="res/screens/ios/Default@2x~universal~anyany.png" />
@@ -159,7 +171,13 @@ Include in your ```config.xml``` file:
     <splash src="res/screens/ios/Default@2x~universal~comcom.png" />
     <splash src="res/screens/ios/Default@3x~universal~anyany.png" />
     <splash src="res/screens/ios/Default@3x~universal~anycom.png" />
-    <splash src="res/screens/ios/Default@3x~universal~comany.png" />
+    <splash src="res/screens/ios/Default@3x~universal~comany.png" />    
+    <splash src="res/screens/ios/Default@2x~universal~anyany~dark.png" />
+    <splash src="res/screens/ios/Default@2x~universal~comany~dark.png" />
+    <splash src="res/screens/ios/Default@2x~universal~comcom~dark.png" />
+    <splash src="res/screens/ios/Default@3x~universal~anyany~dark.png" />
+    <splash src="res/screens/ios/Default@3x~universal~anycom~dark.png" />
+    <splash src="res/screens/ios/Default@3x~universal~comany~dark.png" />
 </platform>
 <platform name="windows">
     <splash width="620" height="300" src="res/screens/windows/SplashScreen.scale-100.png" />
