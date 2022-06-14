@@ -599,7 +599,7 @@ var generateSplashForPlatform = function (platform) {
 var generateDarkSplashForPlatform = function (platform) {
     var deferred = Q.defer();
     var desc = platform.desc ? platform.desc : platform.name;
-    display.header('Generating splash screen for ' + desc);
+    display.header('Generating dark splash screen for ' + desc);
     var all = [];
     var splashes = platform.splash;
     splashes.forEach(function (splash) {
@@ -702,7 +702,7 @@ var validDarkSplashExists = function () {
 function generate(options) {
     settings = options || settings;
     display.header('Checking Splash & Icon');
-    return Q.all([validIconExists(), validSplashExists(), validDarkSplashExists])
+    return Q.all([validIconExists(), validSplashExists(), validDarkSplashExists()])
         .then(function (results) {
             var hasIcon = results[0] === true;
             var hasSplash = results[1] === true;
@@ -723,6 +723,7 @@ function generate(options) {
                 promise = Q.when(promise)
                     .then(getPlatformSplashs)
                     .then(generateSplashes)
+                    .then(getPlatformDarkSplashs)
                     .then(generateDarkSplashes);
             }
 
