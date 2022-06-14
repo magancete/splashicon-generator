@@ -722,7 +722,7 @@ function generate(options) {
             if (hasSplash) {
                 promise = Q.when(promise)
                     .then(getPlatformSplashs)
-                    .then(generateSplashes);
+                    .then(generateSplashes)
                     .then(generateDarkSplashes);
             }
 
