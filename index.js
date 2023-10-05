@@ -24,6 +24,9 @@ var getPlatformIcons = function () {
             // Default icon (avoid Apple submit error ITMS-90032)
             { name: "../../../icon.png", size: 57 },
 
+            { name: "icon.png", size: 57 },
+            { name: "icon@2x.png", size: 114 },
+
             { name: 'icon-20.png', size: 20 },
             { name: 'icon-20@3x.png', size: 60 },   
                        
@@ -55,6 +58,10 @@ var getPlatformIcons = function () {
             { name: 'icon-60.png', size: 60 },
             { name: 'icon-60@2x.png', size: 120 },            
             { name: 'icon-60@3x.png', size: 180 },
+
+            { name: 'icon-small.png', size: 29 },
+            { name: 'icon-small@2x.png', size: 58 },            
+            { name: 'icon-small@3x.png', size: 87 },
             
             { name: 'icon-72.png', size: 72 },
             { name: 'icon-72@2x.png', size: 144 },
